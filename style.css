@@ -1,3 +1,19 @@
+html, body {padding:0; margin:0; height:100%;}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -46,6 +62,8 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
+
+
 h1, h2, h3, blockquote {
   font-family: elevon, sans-serif;
   font-weight: 600;
@@ -75,14 +93,6 @@ section {
   margin-bottom: var(--spacing);
 }
 
-.social-disc {
-  list-style: none;
-}
-
-.contact {
-  background-color: transparent;
-}
-
 blockquote {
   margin: 0;
   padding: 0;
@@ -101,3 +111,4 @@ blockquote p {
 .left {
   grid-column: 6 / 12;
 }
+
