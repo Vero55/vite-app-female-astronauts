@@ -40,6 +40,7 @@ scene.add(pointLight, ambientLight);
 //const lightHelper = new THREE.PointLightHelper(pointLight)
 //const gridHelper = new THREE.GridHelper(200, 50);
 //scene.add(lightHelper, gridHelper)
+
 const controls = new OrbitControls(camera, renderer.domElement);
 scene.add(controls)
 
@@ -55,12 +56,12 @@ Array(300).fill().forEach(addStar)
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('/sky.jpg');
+const spaceTexture = new THREE.TextureLoader().load('images/sky.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const veronikaTexture = new THREE.TextureLoader().load('/Veronika.jpeg');
+const veronikaTexture = new THREE.TextureLoader().load('images/Veronika.jpeg');
 
 const veronika = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: veronikaTexture }));
 
@@ -68,8 +69,8 @@ scene.add(veronika);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('images/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('images/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
