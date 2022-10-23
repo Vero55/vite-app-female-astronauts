@@ -22,7 +22,7 @@ renderer.render( scene, camera );
 // Torus
 
 const geometry = new THREE.TorusGeometry( 10, 3, 16, 60);
-const material = new THREE.MeshNormalMaterial( { color:0x978B8B, wireframe: true });
+const material = new THREE.MeshBasicMaterial( { color:0xF3F3F3, wireframe: true });
 const torus = new THREE.Mesh( geometry, material );
 
 scene.add(torus);
@@ -45,7 +45,7 @@ scene.add(controls)
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-  const material = new THREE.MeshStandardMaterial( { color: 0xDECA8E });
+  const material = new THREE.MeshStandardMaterial( { color: 0xF3F3F3 });
   const star = new THREE.Mesh( geometry, material );
   const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ));
   star.position.set(x, y, z);
@@ -65,6 +65,47 @@ const veronikaTexture = new THREE.TextureLoader().load('Veronika.jpeg');
 const veronika = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: veronikaTexture }));
 
 scene.add(veronika);
+
+// Moon
+
+const moonTexture = new THREE.TextureLoader().load('moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: moonTexture,
+    normalMap: normalTexture,
+  })
+);
+
+scene.add(moon);
+
+moon.position.z = 30;
+moon.position.setX(-10);
+
+veronika.position.z = -5;
+veronika.position.x = 2;
+
+// Scroll Animation
+
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
+  moon.rotation.x += 0.05;
+  moon.rotation.y += 0.075;
+  moon.rotation.z += 0.05;
+
+  veronika.rotation.y += 0.01;
+  veronika.rotation.z += 0.01;
+
+  camera.position.z = t * -0.01;
+  camera.position.x = t * -0.0002;
+  camera.rotation.y = t * -0.0002;
+}
+
+document.body.onscroll = moveCamera;
+moveCamera();
+
 
 function animate() {
   requestAnimationFrame( animate );
