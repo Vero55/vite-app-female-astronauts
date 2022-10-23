@@ -4,9 +4,29 @@ canvas {
   left: 0;
 }
 
+#navbar {
+  background-color: rgb(111, 89, 176);
+  opacity: 95%;  
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  border: none;
+  float: right;
+}
+
+.nav-item {
+  padding-left: 4rem;
+  font-size: 1.4rem;
+}
+
+#logo-image {
+  width: 170px;
+  left: 30px; 
+}
+
 :root {
-  --dark-bg: rgba(13, 25, 75, 0.717);
-  --spacing: 350px;
+  --dark-bg: rgba(205, 121, 73, 0.717);
+  --spacing: 330px;
 
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
@@ -28,7 +48,7 @@ main {
 
 h1, h2, h3, blockquote {
   font-family: elevon, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }
 
