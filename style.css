@@ -55,6 +55,14 @@ section {
   margin-bottom: var(--spacing);
 }
 
+.social-disc {
+  list-style: none;
+}
+
+.contact {
+  background-color: transparent;
+}
+
 blockquote {
   margin: 0;
   padding: 0;
