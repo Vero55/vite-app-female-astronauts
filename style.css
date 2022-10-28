@@ -1,5 +1,5 @@
 canvas {
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
 }
@@ -75,4 +75,4 @@ blockquote p {
 .page-container {
   min-height: calc(100vh - 95px);
 }
- 
+
