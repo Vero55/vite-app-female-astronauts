@@ -1,4 +1,10 @@
-html, body {padding:0; margin:0; height:100%;}
+html, body {
+  padding:0;
+  margin:0; 
+  height:100%;
+  box-sizing: border-box;
+  position: relative;
+}
 
 canvas {
   position: fixed;
@@ -102,10 +108,16 @@ blockquote p {
   min-height: calc(100vh - 95px);
 }
 
-
 footer {
+  background: #f5b335;
+  height: 40px;
   position: fixed;
   bottom: 0;
+  transition: bottom 0.2s ease-in-out;
   width: 100%;
-  height: 6rem;            /* Footer height */
-  }
+}
+
+.nav-down {
+  bottom: -40px;
+}
+  
