@@ -61,11 +61,11 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const veronikaTexture = new THREE.TextureLoader().load('Veronika.jpeg');
+const valentinaTexture = new THREE.TextureLoader().load('Valentina_Tereshkova.jpeg');
 
-const veronika = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: veronikaTexture }));
+const valentina = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: valentinaTexture }));
 
-scene.add(veronika);
+scene.add(valentina);
 
 // Moon
 
@@ -85,8 +85,8 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-veronika.position.z = -5;
-veronika.position.x = 2;
+valentina.position.z = -5;
+valentina.position.x = 2;
 
 // Scroll Animation
 
@@ -96,8 +96,8 @@ function moveCamera() {
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  veronika.rotation.y += 0.01;
-  veronika.rotation.z += 0.01;
+  valentina.rotation.y += 0.01;
+  valentina.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;

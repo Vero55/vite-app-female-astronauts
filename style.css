@@ -12,26 +12,6 @@ canvas {
   left: 0;
 }
 
-#navbar {
-  background-color: rgb(111, 89, 176);
-  opacity: 95%;  
-}
-
-.navbar-toggler .navbar-toggler-icon {
-  border: none;
-  float: right;
-}
-
-.nav-item {
-  padding-left: 4rem;
-  font-size: 1.4rem;
-}
-
-#logo-image {
-  width: 170px;
-  left: 30px; 
-}
-
 :root {
   --dark-bg: rgba(205, 121, 73, 0.717);
   --spacing: 330px;
@@ -95,9 +75,9 @@ blockquote {
 blockquote p {
   color: black;
   background-color: white;
-  font-size: 4rem;
+  font-size: 2rem;
   display: inline;
-  line-height: 1;
+  line-height: 1,5;
 }
 
 .left {
@@ -108,16 +88,6 @@ blockquote p {
   min-height: calc(100vh - 95px);
 }
 
-footer {
-  background: #f5b335;
-  height: 40px;
-  position: fixed;
-  bottom: 0;
-  transition: bottom 0.2s ease-in-out;
-  width: 100%;
-}
-
-.nav-down {
-  bottom: -40px;
-}
-  
+img {
+  max-width: 70px;
+}  
