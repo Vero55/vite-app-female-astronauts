@@ -85,7 +85,7 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-valentina.position.z = -5;
+valentina.position.z = -4;
 valentina.position.x = 2;
 
 // Scroll Animation
