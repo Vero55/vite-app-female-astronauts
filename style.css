@@ -1,11 +1,14 @@
 html, body {
   height: 100%;
+  margin: 0;
 }
 
 canvas {
   position:fixed;
   top: 0;
   left: 0;
+  margin: 0;
+  height: 100%;
 }
 
 :root {
@@ -24,15 +27,11 @@ main {
   position: absolute;
   width: 100%;
   margin: 0px auto;
-  padding: 120px 0px;
+  padding: 100px 0px;
   overflow: auto;
   
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-}
-
-#wrap {
-  min-height: 100%;
 }
 
 h1 {
@@ -88,14 +87,15 @@ blockquote p {
 
   hr.shine {
     height: 7px;
-    width: 60%;
+    width: 70%;
     background-image: radial-gradient(
       farthest-side at 50% -50%,
       hsla(0, 0%, 0%, 0.5),
       hsla(0, 0%, 0%, 0));
   }
   
-  
-  
+  /*/ 
+  * { border: 1px solid red; }
+  /*/
 
 
