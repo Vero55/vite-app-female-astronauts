@@ -87,7 +87,7 @@ blockquote p {
 
   hr.shine {
     height: 7px;
-    width: 70%;
+    width: 95%;
     background-image: radial-gradient(
       farthest-side at 50% -50%,
       hsla(0, 0%, 0%, 0.5),
@@ -98,4 +98,9 @@ blockquote p {
   * { border: 1px solid red; }
   /*/
 
-
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    }
